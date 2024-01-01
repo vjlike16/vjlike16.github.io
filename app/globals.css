@@ -100,3 +100,7 @@ a {
 .text-theme-primary {
   color: #112d4e;
 }
+
+.text-justify {
+  text-align: justify !important;
+}

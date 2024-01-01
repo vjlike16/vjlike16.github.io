@@ -21,49 +21,77 @@ const Skill = () => {
       content:
         'Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
       image: 'react.svg',
-      imageAlt: 'React',
+      imageAlt: 'ReactJS',
     },
     {
       title: 'VueJS',
       content:
         'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
       image: 'vue.svg',
-      imageAlt: 'Vue',
+      imageAlt: 'VueJS',
     },
     {
       title: 'NextJS',
       content:
         'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: 'vue.svg',
-      imageAlt: 'Next',
+      image: 'nextjs.svg',
+      imageAlt: 'NextJS',
     },
     {
       title: 'NodeJS',
       content:
         'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: 'vue.svg',
-      imageAlt: 'Vue',
+      image: 'nodejs.svg',
+      imageAlt: 'NodeJS',
     },
     {
       title: 'MongoDB',
       content:
         'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: 'vue.svg',
-      imageAlt: 'Vue',
+      image: 'mongodb.svg',
+      imageAlt: 'MongoDB',
     },
     {
       title: 'MySQL',
       content:
         'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: 'vue.svg',
-      imageAlt: 'Vue',
+      image: 'mysql.svg',
+      imageAlt: 'MySQL',
     },
     {
       title: 'JIRA',
       content:
         'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: 'vue.svg',
-      imageAlt: 'Vue',
+      image: 'jira.svg',
+      imageAlt: 'JIRA',
+    },
+    {
+      title: 'SaSS',
+      content:
+        'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
+      image: 'sass.svg',
+      imageAlt: 'SaSS',
+    },
+    {
+      title: 'GIT',
+      content:
+        'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
+      image: 'git.svg',
+      imageAlt: 'GIT',
+    },
+    {
+      title: 'AJAX',
+      content:
+        'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
+      image: 'ajax.svg',
+      imageAlt: 'AJAX',
+    },
+    {
+      title: 'jQuery',
+      content:
+        'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
+      image: 'jquery.svg',
+      imageAlt: 'jQuery',
     },
   ];
   return (
@@ -86,9 +114,7 @@ const Skill = () => {
                   <h6>
                     <b>{data.title}</b>
                   </h6>
-                  <p className='text-muted' style={{ textAlign: 'justify' }}>
-                    {data.content}
-                  </p>
+                  <p className='text-muted text-justify'>{data.content}</p>
                 </div>
               );
             })}
