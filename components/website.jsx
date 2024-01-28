@@ -6,9 +6,10 @@ const Website = () => {
       title: 'VoiceStar',
       content:
         'Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.',
-      image: '/www.jpg',
+      image: '/voiceStar.jpg',
       imageAlt: 'VoiceStar',
       websiteLink: 'https://starbar.ai/',
+      imageWidth: '100%',
     },
     {
       title: '26Miles',
@@ -17,38 +18,43 @@ const Website = () => {
       image: '/www.jpg',
       imageAlt: '26Miles',
       websiteLink: '#',
+      imageWidth: '200px',
     },
     {
       title: '2030 or Bust',
       content:
         'Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: '/www.jpg',
+      image: '/2030orBust.jpg',
       imageAlt: '2030orBust',
       websiteLink: 'https://www.2030orbust.org/',
+      imageWidth: '100%',
     },
     {
-      title: 'Synano App',
+      title: 'Synando App',
       content:
         'Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
       image: '/www.jpg',
       imageAlt: 'Synando',
       websiteLink: '#',
+      imageWidth: '200px',
     },
     {
       title: 'Lever5',
       content:
         'Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.',
-      image: '/www.jpg',
+      image: '/lever5.jpg',
       imageAlt: 'Lever5',
       websiteLink: 'https://lever5.com/',
+      imageWidth: '100%',
     },
     {
       title: 'OyoApp',
       content:
         'Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality.',
-      image: '/www.jpg',
+      image: '/oyoApp.png',
       imageAlt: 'OyoApp',
       websiteLink: 'https://system.oyoapp.com/',
+      imageWidth: '100%',
     },
     {
       title: 'Klikidy Pay',
@@ -57,6 +63,7 @@ const Website = () => {
       image: '/www.jpg',
       imageAlt: 'Klikidy Pay',
       websiteLink: '#',
+      imageWidth: '200px',
     },
     {
       title: 'Weather Co-op',
@@ -65,6 +72,7 @@ const Website = () => {
       image: '/www.jpg',
       imageAlt: 'Weather Co-op',
       websiteLink: '#',
+      imageWidth: '200px',
     },
   ];
   return (
@@ -81,13 +89,22 @@ const Website = () => {
                     <Image
                       src={data.image}
                       alt={data.imageAlt}
-                      width={75}
-                      height={75}
-                      style={{ width: '200px', height: '200px' }}
-                      className='mb-3 card-img-top mx-auto'
+                      width={100}
+                      height={100}
+                      style={{ width: `${data.imageWidth}`, height: '200px' }}
+                      quality={100}
+                      className='mb-1 card-img-top mx-auto'
                     />
                     <div className='card-body'>
-                      <h5>{data.title}</h5>
+                      <h5>
+                        <Link
+                          href={data.websiteLink}
+                          target='blank'
+                          style={{ marginRight: '1rem' }}
+                        >
+                          {data.title}
+                        </Link>
+                      </h5>
                       <p className='card-text text-justify'>{data.content}</p>
                     </div>
                     <div className='px-3 pb-3'>
