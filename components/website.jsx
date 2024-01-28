@@ -6,7 +6,7 @@ const Website = () => {
       title: 'VoiceStar',
       content:
         'Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.',
-      image: '/voiceStar.jpg',
+      image: '/voicestar.jpg',
       imageAlt: 'VoiceStar',
       websiteLink: 'https://starbar.ai/',
       imageWidth: '100%',
