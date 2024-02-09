@@ -5,7 +5,7 @@ const Website = () => {
     {
       title: 'VoiceStar',
       content:
-        'Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.',
+        'Built using Loopback and MongoDB as backend services, EJS as frontend templating engine and third party libraries like Stripe, Google.',
       image: '/voicestar.jpg',
       imageAlt: 'VoiceStar',
       websiteLink: 'https://starbar.ai/',
@@ -14,7 +14,7 @@ const Website = () => {
     {
       title: '26Miles',
       content:
-        'Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
+        'Built using Loopback and MongoDB as backend services, EJS as frontend templating engine and third party libraries like Stripe.',
       image: '/www.jpg',
       imageAlt: '26Miles',
       websiteLink: '#',
@@ -23,7 +23,7 @@ const Website = () => {
     {
       title: '2030 or Bust',
       content:
-        'Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
+        'Built using Express and MongoDB as backend services, HTML and CSS as frontend and Gulp JS to bundle JavaScript.',
       image: '/2030orBust.jpg',
       imageAlt: '2030orBust',
       websiteLink: 'https://www.2030orbust.org/',
@@ -32,7 +32,7 @@ const Website = () => {
     {
       title: 'Synando App',
       content:
-        'Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
+        'Built using Loopback and MongoDB as backend services to provide support to mobile apis and third party libraries like Google, Socket io.',
       image: '/www.jpg',
       imageAlt: 'Synando',
       websiteLink: '#',
@@ -41,7 +41,7 @@ const Website = () => {
     {
       title: 'Lever5',
       content:
-        'Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.',
+        'Built using Express and SQL as backend services, Vue JS as frontend framework and third party libraries like PayPal, Quotemedia, Stripe, Socket io.',
       image: '/lever5.jpg',
       imageAlt: 'Lever5',
       websiteLink: 'https://lever5.com/',
@@ -50,7 +50,7 @@ const Website = () => {
     {
       title: 'OyoApp',
       content:
-        'Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality.',
+        'Built using Express and MongoDB as backend services, EJS as templating engine and third party libraries like Facebook, Google, LinkedIn, Stripe.',
       image: '/oyoApp.png',
       imageAlt: 'OyoApp',
       websiteLink: 'https://system.oyoapp.com/',
@@ -59,20 +59,20 @@ const Website = () => {
     {
       title: 'Klikidy Pay',
       content:
-        'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: '/www.jpg',
+        'Built using Express, CouchDB and HyperLedger Fabric (Blockchain) as backend services, EJS as templating engine and third party libraries like Authorize.net, Twilio.',
+      image: '/klikidyPay.png',
       imageAlt: 'Klikidy Pay',
-      websiteLink: '#',
-      imageWidth: '200px',
+      websiteLink: 'http://18.189.96.178:8383/merchant/',
+      imageWidth: '100%',
     },
     {
       title: 'Weather Co-op',
       content:
-        'Advanced proficiency in Vue, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.',
-      image: '/www.jpg',
+        'Built using Express, MongoDB as backend services, EJS as templating engine and third party libraries like Stripe, VisualCrossing, Twilio.',
+      image: '/weatherApp.png',
       imageAlt: 'Weather Co-op',
-      websiteLink: '#',
-      imageWidth: '200px',
+      websiteLink: 'http://159.89.234.66:9051/',
+      imageWidth: '100%',
     },
   ];
   return (
