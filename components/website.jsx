@@ -70,7 +70,7 @@ const Website = () => {
     {
       title: 'Weather Co-op',
       content:
-        'Built using Express, MongoDB as backend services, EJS as templating engine and third party libraries like Stripe, VisualCrossing, Twilio.',
+        'Built using Express, MongoDB as backend services, Angular as frontend framework and third party libraries like Stripe, VisualCrossing, Twilio.',
       image: '/weatherApp.png',
       imageAlt: 'Weather Co-op',
       websiteLink: 'http://159.89.234.66:9051/',
