@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 const Header = () => {
   const handleScroll = (e) => {
     e.preventDefault();
@@ -55,6 +56,21 @@ const Header = () => {
           </ul>
         </header>
       </div>
+      <Link
+        href='#body'
+        className='position-fixed'
+        id='backToTopBtn'
+        aria-current='page'
+        onClick={handleScroll}
+      >
+        <Image
+          src='caretUp.svg'
+          alt='Back to Top'
+          width={40}
+          height={40}
+          className='mb-3 mx-auto'
+        />
+      </Link>
     </div>
   );
 };

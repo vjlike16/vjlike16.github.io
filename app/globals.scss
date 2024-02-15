@@ -36,21 +36,66 @@ a {
 }
 
 body.light-theme {
-  #body,
-  #body #header {
+  #body {
     background-color: $light-theme-orange-light !important;
-  }
-  #body #skill,
-  #body #website {
-    background-color: $light-theme-orange-medium !important;
+    #header {
+      background-color: $light-theme-orange-light !important;
+    }
+    #skill,
+    #website {
+      background-color: $light-theme-orange-medium !important;
+    }
   }
   hr {
     border-top: #f7c18b solid;
     opacity: 0.9;
     border: 1;
   }
-  #website .card {
-    background-color: $light-theme-orange-lightest;
-    border: 0;
+  #website {
+    .card {
+      background-color: $light-theme-orange-lightest;
+      border: 0;
+    }
+  }
+  #backToTopBtn {
+    bottom: 0rem;
+    z-index: 100;
+    opacity: 0.7;
+  }
+  @media (max-width: 575.98px) {
+    #backToTopBtn {
+      right: 10px;
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    #backToTopBtn {
+      right: 20px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #backToTopBtn {
+      right: 30px;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    #backToTopBtn {
+      right: 30px;
+    }
+  }
+
+  #backToTopBtn:hover {
+    opacity: 1;
   }
 }
