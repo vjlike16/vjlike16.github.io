@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './globals.css';
+import './globals.scss';
 
 export const metadata = {
   title: 'Vijay Kumar Sharma',
@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body style={{ backgroundColor: '#DBE2EF' }}>{children}</body>
+      <body className='light-theme'>{children}</body>
     </html>
   );
 }

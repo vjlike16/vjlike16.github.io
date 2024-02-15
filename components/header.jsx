@@ -11,18 +11,19 @@ const Header = () => {
     });
   };
   return (
-    <div style={{ backgroundColor: '#d1fae5' }}>
+    <div id='header'>
       <div className='container px-4 px-sm-3 px-lg-5'>
         <header className='d-flex flex-wrap justify-content-end py-3'>
           <ul className='nav nav-pills'>
             <li className='nav-item'>
-              <a
-                href='#main'
+              <Link
+                href='#body'
                 className='nav-link text-dark'
                 aria-current='page'
+                onClick={handleScroll}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className='nav-item'>
               <Link
@@ -48,7 +49,7 @@ const Header = () => {
                 className='nav-link text-dark'
                 onClick={handleScroll}
               >
-                Project
+                Projects
               </Link>
             </li>
           </ul>

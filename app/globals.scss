@@ -1,0 +1,56 @@
+$light-theme-grey-dark: #484f52;
+$light-theme-orange-lightest: #fefcf6;
+$light-theme-orange-light: #fdf4dd;
+$light-theme-orange-medium: #ffeabd;
+$light-theme-orange-dark: #fbc18b;
+
+$dark-theme-grey-light: #444a4d;
+$dark-theme-grey-dark: #3b4448;
+$dark-theme-orange-light: #fee7b6;
+$dark-theme-orange-dark: #e56936;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  color: $dark-theme-grey-dark !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+.nav-pills .nav-link {
+  font-weight: 500;
+}
+
+body.light-theme {
+  #body,
+  #body #header {
+    background-color: $light-theme-orange-light !important;
+  }
+  #body #skill,
+  #body #website {
+    background-color: $light-theme-orange-medium !important;
+  }
+  hr {
+    border-top: #f7c18b solid;
+    opacity: 0.9;
+    border: 1;
+  }
+  #website .card {
+    background-color: $light-theme-orange-lightest;
+    border: 0;
+  }
+}

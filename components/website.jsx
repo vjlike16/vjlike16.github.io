@@ -15,7 +15,8 @@ const Website = () => {
       title: '26Miles',
       content:
         'Built using Loopback and MongoDB as backend services, EJS as frontend templating engine and third party libraries like Stripe.',
-      image: '/www.jpg',
+      image: '/www.svg',
+      imagePadding: '20px',
       imageAlt: '26Miles',
       websiteLink: '#',
       imageWidth: '200px',
@@ -33,7 +34,8 @@ const Website = () => {
       title: 'Synando App',
       content:
         'Built using Loopback and MongoDB as backend services to provide support to mobile apis and third party libraries like Google, Socket io.',
-      image: '/www.jpg',
+      image: '/www.svg',
+      imagePadding: '20px',
       imageAlt: 'Synando',
       websiteLink: '#',
       imageWidth: '200px',
@@ -77,9 +79,9 @@ const Website = () => {
   ];
   return (
     <>
-      <div style={{ backgroundColor: '#f8fafc' }}>
-        <div className='container py-5 px-4 px-sm-3 px-lg-5' id='website'>
-          <h3 className='mb-4'>Web Creations</h3>
+      <div id='website'>
+        <div className='container py-5 px-4 px-sm-3 px-lg-5'>
+          <h3 className='mb-4'>Projects</h3>
           <hr />
           <div className='row g-4 mt-3'>
             {allWebsites.map((data, index) => {
@@ -91,7 +93,13 @@ const Website = () => {
                       alt={data.imageAlt}
                       width={100}
                       height={100}
-                      style={{ width: `${data.imageWidth}`, height: '200px' }}
+                      style={{
+                        width: `${data.imageWidth}`,
+                        height: '200px',
+                        padding: data?.imagePadding
+                          ? `${data.imagePadding}`
+                          : '0',
+                      }}
                       quality={100}
                       className='mb-1 card-img-top mx-auto'
                     />

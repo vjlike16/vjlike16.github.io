@@ -18,8 +18,8 @@ const About = () => {
 
   return (
     <>
-      <div style={{ backgroundColor: '#fff' }}>
-        <div className='container py-4 px-4 px-sm-3 px-lg-5' id='about'>
+      <div id='about'>
+        <div className='container py-4 px-4 px-sm-3 px-lg-5'>
           <main className='row justify-content-between align-items-center py-4'>
             <div className='d-none d-md-block col-md-6'>
               <div className='row'>
@@ -33,7 +33,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className='col-12 col-md-6 text-dark'>
+            <div className='col-12 col-md-6'>
               <h3>About Me</h3>
               <hr />
               <p className='text-justify'>

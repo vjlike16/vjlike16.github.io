@@ -73,8 +73,8 @@ const Skill = () => {
   ];
   return (
     <>
-      <div style={{ backgroundColor: '#f8fafc' }}>
-        <div className='container py-5 px-4 px-sm-3 px-lg-5' id='skill'>
+      <div id='skill'>
+        <div className='container py-5 px-4 px-sm-3 px-lg-5'>
           <h3 className='mb-4'>Tech Stack</h3>
           <hr />
           <div className='row mt-4'>
