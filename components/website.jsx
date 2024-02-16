@@ -101,7 +101,7 @@ const Website = ({ theme }) => {
                       height={100}
                       style={{
                         width: `${data.imageWidth}`,
-                        height: '170px',
+                        height: '190px',
                         padding: data?.imagePadding
                           ? `${data.imagePadding}`
                           : '0',
