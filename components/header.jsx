@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
   const handleScroll = (e) => {
     e.preventDefault();
     const href = e.currentTarget.href;
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div id='header'>
       <div className='container px-4 px-sm-3 px-lg-5'>
-        <header className='d-flex flex-wrap justify-content-end py-3'>
+        <header className='d-flex flex-wrap justify-content-end align-items-center py-3'>
           <ul className='nav nav-pills'>
             <li className='nav-item'>
               <Link
@@ -56,21 +56,40 @@ const Header = () => {
           </ul>
         </header>
       </div>
-      <Link
-        href='#body'
-        className='position-fixed'
-        id='backToTopBtn'
-        aria-current='page'
-        onClick={handleScroll}
+      <div
+        className='position-fixed d-flex flex-column align-items-center justify-content-between'
+        id='backToTopContainer'
       >
-        <Image
-          src='caretUp.svg'
-          alt='Back to Top'
-          width={40}
-          height={40}
-          className='mb-3 mx-auto'
-        />
-      </Link>
+        {theme == 'light-theme' && (
+          <Image
+            src='moon.svg'
+            alt='Dark Mode'
+            width={35}
+            height={35}
+            onClick={toggleTheme}
+            className='cursor-pointer mb-3 '
+          />
+        )}
+        {theme == 'dark-theme' && (
+          <Image
+            src='sun.svg'
+            alt='Light Mode'
+            width={35}
+            height={35}
+            onClick={toggleTheme}
+            className='cursor-pointer mb-3 '
+          />
+        )}
+        <Link href='#body' aria-current='page' onClick={handleScroll}>
+          <Image
+            src={theme == 'light-theme' ? 'caretUp.svg' : 'caretUp-dark.svg'}
+            alt='Back to Top'
+            width={40}
+            height={40}
+            className='mb-3 mx-auto'
+          />
+        </Link>
+      </div>
     </div>
   );
 };

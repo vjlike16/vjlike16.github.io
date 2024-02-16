@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-const Website = () => {
+const Website = ({ theme }) => {
   const allWebsites = [
     {
       title: 'VoiceStar',
@@ -81,7 +81,7 @@ const Website = () => {
     <>
       <div id='website'>
         <div className='container py-5 px-4 px-sm-3 px-lg-5'>
-          <h3 className='mb-4'>Projects</h3>
+          <h3 className='mb-4 text-dark'>Projects</h3>
           <hr />
           <div className='row g-4 mt-3'>
             {allWebsites.map((data, index) => {
@@ -89,13 +89,19 @@ const Website = () => {
                 <div key={index} className='col-12 col-sm-6 col-md-4'>
                   <div className='card shadow-sm h-100'>
                     <Image
-                      src={data.image}
+                      src={
+                        data.image != '/www.svg'
+                          ? data.image
+                          : theme == 'light-theme'
+                          ? data.image
+                          : '/www-dark.svg'
+                      }
                       alt={data.imageAlt}
                       width={100}
                       height={100}
                       style={{
                         width: `${data.imageWidth}`,
-                        height: '200px',
+                        height: '170px',
                         padding: data?.imagePadding
                           ? `${data.imagePadding}`
                           : '0',
@@ -104,7 +110,7 @@ const Website = () => {
                       className='mb-1 card-img-top mx-auto'
                     />
                     <div className='card-body'>
-                      <h5>
+                      <h5 className='text-dark'>
                         <Link
                           href={data.websiteLink}
                           target='blank'
@@ -113,7 +119,7 @@ const Website = () => {
                           {data.title}
                         </Link>
                       </h5>
-                      <p className='card-text text-justify'>{data.content}</p>
+                      <p className='text-justify mb-0'>{data.content}</p>
                     </div>
                     <div className='px-3 pb-3'>
                       <div className='btn-group'>
@@ -123,7 +129,11 @@ const Website = () => {
                           style={{ marginRight: '1rem' }}
                         >
                           <Image
-                            src='/website.svg'
+                            src={
+                              theme == 'light-theme'
+                                ? 'website.svg'
+                                : 'website-dark.svg'
+                            }
                             alt='Website Logo'
                             width={25}
                             height={25}
@@ -131,7 +141,11 @@ const Website = () => {
                         </Link>
                         <Link href='https://github.com/vjlike16' target='blank'>
                           <Image
-                            src='/github.svg'
+                            src={
+                              theme == 'light-theme'
+                                ? 'github.svg'
+                                : 'github-dark.svg'
+                            }
                             alt='Github Logo'
                             width={25}
                             height={25}

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-const Main = () => {
+const Main = ({ theme }) => {
   return (
     <div id='main'>
       <div className='container py-5 px-4 px-sm-3 px-lg-5 '>
@@ -18,7 +18,9 @@ const Main = () => {
               <div className='col-1'>
                 <Link href='https://github.com/vjlike16' target='blank'>
                   <Image
-                    src='/github.svg'
+                    src={
+                      theme == 'light-theme' ? 'github.svg' : 'github-dark.svg'
+                    }
                     alt='Github Logo'
                     width={25}
                     height={25}
@@ -31,7 +33,11 @@ const Main = () => {
                   target='blank'
                 >
                   <Image
-                    src='/linkedin.svg'
+                    src={
+                      theme == 'light-theme'
+                        ? 'linkedin.svg'
+                        : 'linkedin-dark.svg'
+                    }
                     alt='LinkedIn Logo'
                     width={30}
                     height={30}
@@ -41,7 +47,12 @@ const Main = () => {
             </div>
           </div>
           <div className='d-none d-sm-flex col-sm-6 justify-content-center align-items-center'>
-            <Image src='/wall.svg' alt='Main Logo' width={280} height={280} />
+            <Image
+              src={theme == 'light-theme' ? 'wall.svg' : 'wall-dark.svg'}
+              alt='Main Logo'
+              width={280}
+              height={280}
+            />
           </div>
         </main>
       </div>

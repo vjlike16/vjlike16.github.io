@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const About = () => {
+const About = ({ theme }) => {
   let experience = '0 Years';
   const diffInMilliseconds = Math.abs(new Date('2020-01-01') - new Date());
   const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
@@ -25,7 +25,11 @@ const About = () => {
               <div className='row'>
                 <div className='col-12'>
                   <Image
-                    src='/aboutWall.svg'
+                    src={
+                      theme == 'light-theme'
+                        ? 'aboutWall.svg'
+                        : 'aboutWall-dark.svg'
+                    }
                     alt='Main Logo'
                     width={350}
                     height={350}
@@ -34,7 +38,7 @@ const About = () => {
               </div>
             </div>
             <div className='col-12 col-md-6'>
-              <h3>About Me</h3>
+              <h3 className='text-dark'>About Me</h3>
               <hr />
               <p className='text-justify'>
                 Efficient professional with {experience} of experience and a
