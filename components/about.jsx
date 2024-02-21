@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const About = ({ theme }) => {
   let experience = '0 Years';
@@ -51,6 +52,12 @@ const About = ({ theme }) => {
                 skills. Frequently praised as hardworking by my peers, I can be
                 relied upon to help you achieve your goals.
               </p>
+              <Link
+                href='mailto:vjlike16@gmail.com'
+                className='btn btn-outline-secondary'
+              >
+                Get in Touch
+              </Link>
             </div>
           </main>
         </div>

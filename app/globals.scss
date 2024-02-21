@@ -93,9 +93,19 @@ a {
 
 .light-theme {
   color: $dark-theme-grey-dark !important;
+  .btn-outline-secondary {
+    color: $dark-theme-grey-dark !important;
+    border-color: $dark-theme-grey-dark !important;
+  }
+  .btn-outline-secondary:hover {
+    color: $light-theme-orange-light !important;
+    background-color: $dark-theme-grey-dark !important;
+    border-color: $dark-theme-grey-dark !important;
+  }
   #body {
     background-color: $light-theme-orange-light !important;
-    #header {
+    #header,
+    #certificate {
       background-color: $light-theme-orange-light !important;
     }
     #skill,
@@ -108,7 +118,8 @@ a {
     opacity: 0.9;
     border: 1;
   }
-  #website {
+  #website,
+  #certificate {
     .card {
       background-color: $light-theme-orange-lightest;
       border: 0;
@@ -118,6 +129,16 @@ a {
 
 .dark-theme {
   color: $dark-theme-orange-light !important;
+  .btn-outline-secondary {
+    opacity: 0.9;
+    color: $dark-theme-orange-light !important;
+    border-color: $dark-theme-orange-light !important;
+  }
+  .btn-outline-secondary:hover {
+    opacity: 1;
+    color: $dark-theme-grey-light !important;
+    background-color: $dark-theme-orange-light !important;
+  }
   .card-body {
     color: $dark-theme-orange-light !important;
   }
@@ -126,7 +147,8 @@ a {
   }
   #body {
     background-color: $dark-theme-grey-light !important;
-    #header {
+    #header,
+    #certificate {
       background-color: $dark-theme-grey-light !important;
     }
     #skill,
@@ -139,10 +161,34 @@ a {
     opacity: 0.9;
     border: 1;
   }
-  #website {
+  #website,
+  #certificate {
     .card {
       background-color: $dark-theme-grey-lightest;
       border: 0;
     }
   }
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 15px;
+  background: transparent;
+  z-index: 12;
+  overflow: visible;
+}
+::-webkit-scrollbar-corner {
+  background: $dark-theme-grey-dark !important;
+}
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #434953;
+  border-radius: 10px;
+  z-index: 12;
+  border: 4px solid rgba(0, 0, 0, 0) !important;
+  background-clip: padding-box;
+  transition: background-color 0.32s ease-in-out;
+  margin: 4px;
+  min-height: 32px;
+  min-width: 32px;
 }

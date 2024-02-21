@@ -5,6 +5,8 @@ import Header from '@/components/header';
 import Skill from '@/components/skill';
 import Website from '@/components/website';
 import About from '@/components/about';
+import Certificate from '@/components/certificate';
+
 export default function Home() {
   const [theme, setTheme] = useState('light-theme');
 
@@ -19,6 +21,7 @@ export default function Home() {
         <Skill theme={theme}></Skill>
         <About theme={theme}></About>
         <Website theme={theme}></Website>
+        <Certificate theme={theme}></Certificate>
       </div>
     </body>
   );

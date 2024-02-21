@@ -18,16 +18,6 @@ const Header = ({ theme, toggleTheme }) => {
           <ul className='nav nav-pills'>
             <li className='nav-item'>
               <Link
-                href='#body'
-                className='nav-link text-dark'
-                aria-current='page'
-                onClick={handleScroll}
-              >
-                Home
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
                 href='#skill'
                 className='nav-link text-dark'
                 onClick={handleScroll}
@@ -51,6 +41,15 @@ const Header = ({ theme, toggleTheme }) => {
                 onClick={handleScroll}
               >
                 Projects
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                href='#certificate'
+                className='nav-link text-dark'
+                onClick={handleScroll}
+              >
+                Certifications
               </Link>
             </li>
           </ul>
