@@ -1,92 +1,76 @@
 import Image from 'next/image';
+import { themes } from '@/components/themes';
 const Skill = ({ theme }) => {
   const allTech = [
     {
       title: 'HTML5',
-      image: 'html.svg',
-      imageDark: 'html-dark.svg',
+      image: 'html',
     },
     {
       title: 'CSS3',
-      image: 'css.svg',
-      imageDark: 'css-dark.svg',
+      image: 'css',
     },
     {
       title: 'Javascript',
-      image: 'javascript.svg',
-      imageDark: 'javascript-dark.svg',
+      image: 'javascript',
     },
     {
       title: 'ReactJS',
-      image: 'react.svg',
-      imageDark: 'react-dark.svg',
+      image: 'react',
     },
     {
       title: 'VueJS',
-      image: 'vue.svg',
-      imageDark: 'vue-dark.svg',
+      image: 'vue',
     },
     {
       title: 'NextJS',
-      image: 'nextjs.svg',
-      imageDark: 'nextjs-dark.svg',
+      image: 'nextjs',
     },
     {
       title: 'NodeJS',
-      image: 'nodejs.svg',
-      imageDark: 'nodejs-dark.svg',
+      image: 'nodejs',
     },
     {
       title: 'MongoDB',
-      image: 'mongodb.svg',
-      imageDark: 'mongodb-dark.svg',
+      image: 'mongodb',
     },
     {
       title: 'MySQL',
-      image: 'mysql.svg',
-      imageDark: 'mysql-dark.svg',
+      image: 'mysql',
     },
 
     {
       title: 'Sass',
-      image: 'sass.svg',
-      imageDark: 'sass-dark.svg',
+      image: 'sass',
     },
     {
       title: 'Bootstrap',
-      image: 'bootstrap.svg',
-      imageDark: 'bootstrap-dark.svg',
+      image: 'bootstrap',
     },
     {
       title: 'Tailwind',
-      image: 'tailwind.svg',
-      imageDark: 'tailwind-dark.svg',
+      image: 'tailwind',
     },
 
     {
       title: 'AJAX',
-      image: 'ajax.svg',
-      imageDark: 'ajax-dark.svg',
+      image: 'ajax',
     },
     {
       title: 'jQuery',
-      image: 'jquery.svg',
-      imageDark: 'jquery-dark.svg',
+      image: 'jquery',
     },
     {
       title: 'ChartJS',
-      image: 'chartjs.svg',
-      imageDark: 'chartjs-dark.svg',
+      image: 'chartjs',
     },
     {
       title: 'JIRA',
-      image: 'jira.svg',
-      imageDark: 'jira-dark.svg',
+      image: 'jira',
     },
     {
       title: 'GIT',
-      image: 'git.svg',
-      imageDark: 'git-dark.svg',
+      image: 'git',
     },
   ];
   return (
@@ -101,7 +85,7 @@ const Skill = ({ theme }) => {
                 <div key={index} className='col-6 col-sm-3 col-md-2 my-3'>
                   <div className='w-100 d-flex justify-content-center'>
                     <Image
-                      src={theme == 'light-theme' ? data.image : data.imageDark}
+                      src={themes[theme][data.image]}
                       alt={data.title}
                       width={75}
                       height={75}

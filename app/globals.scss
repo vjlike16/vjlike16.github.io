@@ -91,7 +91,7 @@ a {
   }
 }
 
-.light-theme {
+.light {
   color: $dark-theme-grey-dark !important;
   .btn-outline-secondary {
     color: $dark-theme-grey-dark !important;
@@ -127,7 +127,7 @@ a {
   }
 }
 
-.dark-theme {
+.dark {
   color: $dark-theme-orange-light !important;
   .btn-outline-secondary {
     opacity: 0.9;

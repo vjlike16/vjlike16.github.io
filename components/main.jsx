@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { themes } from '@/components/themes';
 const Main = ({ theme }) => {
   return (
     <div id='main'>
@@ -18,9 +19,7 @@ const Main = ({ theme }) => {
               <div className='col-1'>
                 <Link href='https://github.com/vjlike16' target='blank'>
                   <Image
-                    src={
-                      theme == 'light-theme' ? 'github.svg' : 'github-dark.svg'
-                    }
+                    src={themes[theme].github}
                     alt='Github Logo'
                     width={25}
                     height={25}
@@ -33,11 +32,7 @@ const Main = ({ theme }) => {
                   target='blank'
                 >
                   <Image
-                    src={
-                      theme == 'light-theme'
-                        ? 'linkedin.svg'
-                        : 'linkedin-dark.svg'
-                    }
+                    src={themes[theme].linkedin}
                     alt='LinkedIn Logo'
                     width={30}
                     height={30}
@@ -48,7 +43,8 @@ const Main = ({ theme }) => {
           </div>
           <div className='d-none d-sm-flex col-sm-6 justify-content-center align-items-center'>
             <Image
-              src={theme == 'light-theme' ? 'wall.svg' : 'wall-dark.svg'}
+              src={themes[theme].wall}
+              priority={true}
               alt='Main Logo'
               width={280}
               height={280}

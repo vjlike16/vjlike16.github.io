@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { themes } from '@/components/themes';
 const Website = ({ theme }) => {
   const allWebsites = [
     {
       title: 'VoiceStar',
       content:
         'Built using Loopback and MongoDB as backend services, EJS as frontend templating engine and third party libraries like Stripe, Google.',
-      image: '/voicestar.jpg',
+      image: '/website/voicestar.jpg',
       imageAlt: 'VoiceStar',
       websiteLink: 'https://starbar.ai/',
       imageWidth: '100%',
@@ -25,7 +26,7 @@ const Website = ({ theme }) => {
       title: '2030 or Bust',
       content:
         'Built using Express and MongoDB as backend services, HTML and CSS as frontend and Gulp JS to bundle JavaScript.',
-      image: '/2030orBust.jpg',
+      image: '/website/2030orBust.jpg',
       imageAlt: '2030orBust',
       websiteLink: 'https://www.2030orbust.org/',
       imageWidth: '100%',
@@ -44,7 +45,7 @@ const Website = ({ theme }) => {
       title: 'Lever5',
       content:
         'Built using Express and SQL as backend services, Vue JS as frontend framework and third party libraries like PayPal, Quotemedia, Stripe, Socket io.',
-      image: '/lever5.jpg',
+      image: '/website/lever5.jpg',
       imageAlt: 'Lever5',
       websiteLink: 'https://lever5.com/',
       imageWidth: '100%',
@@ -53,7 +54,7 @@ const Website = ({ theme }) => {
       title: 'OyoApp',
       content:
         'Built using Express and MongoDB as backend services, EJS as templating engine and third party libraries like Facebook, Google, LinkedIn, Stripe.',
-      image: '/oyoApp.png',
+      image: '/website/oyoApp.png',
       imageAlt: 'OyoApp',
       websiteLink: 'https://system.oyoapp.com/',
       imageWidth: '100%',
@@ -62,7 +63,7 @@ const Website = ({ theme }) => {
       title: 'Klikidy Pay',
       content:
         'Built using Express, CouchDB and HyperLedger Fabric (Blockchain) as backend services, EJS as templating engine and third party libraries like Authorize.net, Twilio.',
-      image: '/klikidyPay.png',
+      image: '/website/klikidyPay.png',
       imageAlt: 'Klikidy Pay',
       websiteLink: 'http://18.189.96.178:8383/merchant/',
       imageWidth: '100%',
@@ -71,7 +72,7 @@ const Website = ({ theme }) => {
       title: 'Weather Co-op',
       content:
         'Built using Express, MongoDB as backend services, Angular as frontend framework and third party libraries like Stripe, VisualCrossing, Twilio.',
-      image: '/weatherApp.png',
+      image: '/website/weatherApp.png',
       imageAlt: 'Weather Co-op',
       websiteLink: 'http://159.89.234.66:9051/',
       imageWidth: '100%',
@@ -92,9 +93,7 @@ const Website = ({ theme }) => {
                       src={
                         data.image != '/www.svg'
                           ? data.image
-                          : theme == 'light-theme'
-                          ? data.image
-                          : '/www-dark.svg'
+                          : themes[theme].www
                       }
                       alt={data.imageAlt}
                       width={100}
@@ -129,11 +128,7 @@ const Website = ({ theme }) => {
                           style={{ marginRight: '1rem' }}
                         >
                           <Image
-                            src={
-                              theme == 'light-theme'
-                                ? 'website.svg'
-                                : 'website-dark.svg'
-                            }
+                            src={themes[theme].website}
                             alt='Website Logo'
                             width={25}
                             height={25}
@@ -141,11 +136,7 @@ const Website = ({ theme }) => {
                         </Link>
                         <Link href='https://github.com/vjlike16' target='blank'>
                           <Image
-                            src={
-                              theme == 'light-theme'
-                                ? 'github.svg'
-                                : 'github-dark.svg'
-                            }
+                            src={themes[theme].github}
                             alt='Github Logo'
                             width={25}
                             height={25}

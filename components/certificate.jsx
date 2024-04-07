@@ -1,42 +1,43 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { themes } from '@/components/themes';
 const Certificate = ({ theme }) => {
   const allWebsites = [
     {
       title: 'Next JS',
-      credImg: 'UC-3031c5e7-1e51-4d31-816c-b62e580803ab.jpg',
+      credImg: '/certificate/UC-3031c5e7-1e51-4d31-816c-b62e580803ab.jpg',
       imageAlt: 'Next.js Certificate',
       credLink:
         'https://www.udemy.com/certificate/UC-3031c5e7-1e51-4d31-816c-b62e580803ab/',
     },
     {
       title: 'Javascript',
-      credImg: '80623d82498a.png',
+      credImg: '/certificate/80623d82498a.png',
       imageAlt: 'Javascript Certificate',
       credLink: 'https://www.hackerrank.com/certificates/80623d82498a',
     },
     {
       title: 'Problem Solving',
-      credImg: '036975d55cd1.png',
+      credImg: '/certificate/036975d55cd1.png',
       imageAlt: 'Problem Solving Certificate',
       credLink: 'https://www.hackerrank.com/certificates/036975d55cd1',
     },
     {
       title: 'SQL',
-      credImg: 'bf8944a4b94f.png',
+      credImg: '/certificate/bf8944a4b94f.png',
       imageAlt: 'SQL Certificate',
       credLink: 'https://www.hackerrank.com/certificates/bf8944a4b94f',
     },
     {
       title: 'Jira Fundamentals',
-      credImg: 'PQ8xnrLRdFDd67BXUVWp5FZ4.png',
+      credImg: '/certificate/PQ8xnrLRdFDd67BXUVWp5FZ4.png',
       imageAlt: 'Jira Fundamentals Certificate',
       credLink:
         'https://university.atlassian.com/student/award/PQ8xnrLRdFDd67BXUVWp5FZ4',
     },
     {
       title: 'Trello Fundamentals',
-      credImg: 'VPiBpP4rzCmLkMdtaDTDLAxB.png',
+      credImg: '/certificate/VPiBpP4rzCmLkMdtaDTDLAxB.png',
       imageAlt: 'Trello Fundamentals Certificate',
       credLink:
         'https://university.atlassian.com/student/award/VPiBpP4rzCmLkMdtaDTDLAxB',
@@ -54,9 +55,7 @@ const Certificate = ({ theme }) => {
                 <div key={index} className='col-12 col-sm-6 col-md-4'>
                   <div className='card shadow-sm h-100'>
                     <Image
-                      src={
-                        data.credImg != null ? `/${data.credImg}` : '/www.svg'
-                      }
+                      src={data.credImg}
                       alt={data.imageAlt}
                       width={100}
                       height={100}
@@ -74,11 +73,7 @@ const Certificate = ({ theme }) => {
                       <div className='btn-group'>
                         <Link href={data.credLink} target='blank'>
                           <Image
-                            src={
-                              theme == 'light-theme'
-                                ? 'certificate.svg'
-                                : 'certificate-dark.svg'
-                            }
+                            src={themes[theme].certificate}
                             alt='Certificate Logo'
                             width={25}
                             height={25}

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { themes } from '@/components/themes';
 const About = ({ theme }) => {
   let experience = '0 Years';
   const diffInMilliseconds = Math.abs(new Date('2020-01-01') - new Date());
@@ -26,11 +26,7 @@ const About = ({ theme }) => {
               <div className='row'>
                 <div className='col-12'>
                   <Image
-                    src={
-                      theme == 'light-theme'
-                        ? 'aboutWall.svg'
-                        : 'aboutWall-dark.svg'
-                    }
+                    src={themes[theme].aboutWall}
                     alt='Main Logo'
                     width={350}
                     height={350}

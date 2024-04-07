@@ -1,7 +1,15 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { themes } from '@/components/themes';
 const Header = ({ theme, toggleTheme }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const handleScroll = (e) => {
     e.preventDefault();
     const href = e.currentTarget.href;
@@ -11,6 +19,7 @@ const Header = ({ theme, toggleTheme }) => {
       behavior: 'smooth',
     });
   };
+
   return (
     <div id='header'>
       <div className='container px-4 px-sm-3 px-lg-5'>
@@ -59,35 +68,27 @@ const Header = ({ theme, toggleTheme }) => {
         className='position-fixed d-flex flex-column align-items-center justify-content-between'
         id='backToTopContainer'
       >
-        {theme == 'light-theme' && (
-          <Image
-            src='moon.svg'
-            alt='Dark Mode'
-            width={35}
-            height={35}
-            onClick={toggleTheme}
-            className='cursor-pointer mb-3 '
-          />
+        {isClient && (
+          <>
+            <Image
+              src={themes[theme].changeTheme}
+              alt='Change Theme'
+              width={35}
+              height={35}
+              onClick={toggleTheme}
+              className='cursor-pointer mb-3'
+            />
+            <Link href='#body' aria-current='page' onClick={handleScroll}>
+              <Image
+                src={themes[theme].caretUp}
+                alt='Back to Top'
+                width={40}
+                height={40}
+                className='mb-3 mx-auto'
+              />
+            </Link>
+          </>
         )}
-        {theme == 'dark-theme' && (
-          <Image
-            src='sun.svg'
-            alt='Light Mode'
-            width={35}
-            height={35}
-            onClick={toggleTheme}
-            className='cursor-pointer mb-3 '
-          />
-        )}
-        <Link href='#body' aria-current='page' onClick={handleScroll}>
-          <Image
-            src={theme == 'light-theme' ? 'caretUp.svg' : 'caretUp-dark.svg'}
-            alt='Back to Top'
-            width={40}
-            height={40}
-            className='mb-3 mx-auto'
-          />
-        </Link>
       </div>
     </div>
   );
