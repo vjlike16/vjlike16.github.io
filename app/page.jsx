@@ -6,13 +6,10 @@ import Skill from '@/components/skill';
 import Website from '@/components/website';
 import About from '@/components/about';
 import Certificate from '@/components/certificate';
+import useTheme from '@/hooks/theme';
 
 export default function Home() {
-  const [theme, setTheme] = useState('light-theme');
-
-  const toggleTheme = () => {
-    setTheme(theme == 'light-theme' ? 'dark-theme' : 'light-theme');
-  };
+  const [theme, toggleTheme] = useTheme();
   return (
     <body className={theme}>
       <div id='body'>
