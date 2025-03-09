@@ -1,6 +1,10 @@
+'use client';
 import Image from 'next/image';
-import { themes } from '@/components/themes';
-const Skill = ({ theme }) => {
+import { themes } from '@/components';
+import useThemeStore from '@/hooks/theme';
+
+const Skill = () => {
+  const { theme } = useThemeStore();
   const allTech = [
     {
       title: 'HTML5',

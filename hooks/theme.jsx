@@ -1,19 +1,22 @@
-import { useEffect, useState } from 'react';
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
-const useTheme = () => {
-  const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-  };
+const useThemeStore = create(
+  persist(
+    (set) => ({
+      theme: 'light',
+      toggleTheme: () =>
+        set((state) => {
+          const newTheme = state.theme === 'light' ? 'dark' : 'light';
+          document.documentElement.classList.remove(state.theme);
+          document.documentElement.classList.add(newTheme);
+          return { theme: newTheme };
+        }),
+    }),
+    {
+      name: 'theme-storage',
+    }
+  )
+);
 
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove(theme === 'light' ? 'dark' : 'light');
-    root.classList.add(theme === 'light' ? 'light' : 'dark');
-  }, [theme]);
-
-  return [theme, toggleTheme];
-};
-
-export default useTheme;
+export default useThemeStore;

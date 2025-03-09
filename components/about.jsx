@@ -1,7 +1,11 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { themes } from '@/components/themes';
-const About = ({ theme }) => {
+import { themes } from '@/components';
+import useThemeStore from '@/hooks/theme';
+
+const About = () => {
+  const { theme } = useThemeStore();
   let experience = '0 Years';
   const diffInMilliseconds = Math.abs(new Date('2020-01-01') - new Date());
   const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;

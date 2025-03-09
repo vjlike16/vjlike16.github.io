@@ -2,9 +2,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { themes } from '@/components/themes';
-const Header = ({ theme, toggleTheme }) => {
+import { themes } from '@/components';
+import useThemeStore from '@/hooks/theme';
+
+const Header = () => {
   const [isClient, setIsClient] = useState(false);
+  const { theme, toggleTheme } = useThemeStore();
 
   useEffect(() => {
     setIsClient(true);

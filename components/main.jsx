@@ -1,7 +1,11 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { themes } from '@/components/themes';
-const Main = ({ theme }) => {
+import { themes } from '@/components';
+import useThemeStore from '@/hooks/theme';
+
+const Main = () => {
+  const { theme } = useThemeStore();
   return (
     <div id='main'>
       <div className='container py-5 px-4 px-sm-3 px-lg-5 '>

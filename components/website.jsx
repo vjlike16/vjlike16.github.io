@@ -1,7 +1,11 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { themes } from '@/components/themes';
-const Website = ({ theme }) => {
+import { themes } from '@/components';
+import useThemeStore from '@/hooks/theme';
+
+const Website = () => {
+  const { theme } = useThemeStore();
   const allWebsites = [
     {
       title: 'VoiceStar',
